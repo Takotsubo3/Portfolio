@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACnB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;EACV,MAAM,EAAE,qBAAqB;EAC/B,QAAQ,EAAE,MAAM;EAChB,YAAY,EAAE,MAAM;CAErB",
+    "sources": [
+        "Metaballs.module.scss"
+    ],
+    "names": [],
+    "file": "Metaballs.module.css"
+}

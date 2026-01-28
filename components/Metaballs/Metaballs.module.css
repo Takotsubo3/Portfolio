@@ -1,0 +1,9 @@
+.metaballs-container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 8.75rem);
+  overflow: hidden;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+/*# sourceMappingURL=Metaballs.module.css.map */
