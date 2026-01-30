@@ -1,19 +1,49 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
-
 .home-container {
-    width:100%;
-    height: calc(100vh - 8.75rem);
-    place-content: center;
-    
+  height: calc(100vh - 5.625rem);
+  // height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  @include gradient-bg(100%);
+
+  .home-page {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
   .main-title {
-    @include font-averia;
-    font-size: 3.75rem;
     justify-self: center;
+    align-self: center;
     padding: 0;
     margin: 0;
     color: $white;
+    font-size: 7rem;
+    font-weight: bold;
+    @include font-averia;
+  }
+
+  .sub-title {
+    @include font-averia;
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: 1.875rem;
+  }
+
+  .home-btn {
+    background-color: $button-color;
+    border: none;
+    padding: 1.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+    box-shadow: 0 .25rem 1.875rem rgba(0, 0, 0, 0);
   }
 }
-

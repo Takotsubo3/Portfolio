@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "name": "Home Alone Escape Game",
+      "description": "An online escape game with interactive rooms and mini-games.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Node.js", "Nunjucks"]
+    },
+    {
+      "name": "SkillSwipe",
+      "description": "A Tinder-style job platform for students and recruiters.",
+      "technologies": ["PHP", "MySQL", "JavaScript"]
+    }
+  ]
+}

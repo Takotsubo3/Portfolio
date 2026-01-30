@@ -1,0 +1,14 @@
+@use '../../styles//mixins' as *;
+@use '../../styles/variables' as *;
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 100%;
+  border: none;
+  background-color: $button-color;
+  align-content: center;
+  align-items: center;
+}

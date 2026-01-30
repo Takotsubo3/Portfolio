@@ -1,18 +1,18 @@
-@use "../components/Nav/Nav.module.scss";
-@use "./Home/Home.module.scss";
-@use "../components/Metaballs/Metaballs.module.scss";
-@use "../styles/variables" as *;
+@use '../components/Nav/Nav.module.scss';
+@use './Home/Home.module.scss';
+@use './Projects/Projects.module.scss';
+@use './About/About.module.scss';
+@use '../components/Metaballs/Metaballs.module.scss';
+@use '../styles/variables' as *;
+@use '../components//Button/Button.module.scss';
 
-
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   /* background: var(--background);2 */
   // color: var(--foreground);
   // background-color: $primary-color;
-  background: #61e897;
-  background: radial-gradient(circle,rgba(97, 232, 151, 1) 0%, rgb(251, 128, 61) 100%);
 }
