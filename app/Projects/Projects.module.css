@@ -1,0 +1,44 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+.projects-container {
+  height: 100svh;
+}
+
+.projects-container .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-container .card-container .card {
+  width: 250px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  text-align: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.projects-container .card-container .card h2 {
+  font-size: 1.2rem;
+  color: #222;
+  margin: 0;
+}
+
+.projects-container .card-container .card:hover {
+  background-color: #ffe87c;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  cursor: pointer;
+}
+/*# sourceMappingURL=Projects.module.css.map */

@@ -1,7 +1,11 @@
-@use "../components/Nav/Nav.module.scss";
-@use "./Home/Home.module.scss";
-@use "../components/Metaballs/Metaballs.module.scss";
-@use "../styles/variables" as *;
+@use '../components/Nav/Nav.module.scss';
+@use './Home/Home.module.scss';
+@use './Projects/Projects.module.scss';
+@use './About/About.module.scss';
+@use '../components/Metaballs/Metaballs.module.scss';
+@use '../styles/variables' as *;
+@use '../components//Button/Button.module.scss';
+@use './Contact/Contact.module.scss';
 * {
   margin: 0;
   padding: 0;

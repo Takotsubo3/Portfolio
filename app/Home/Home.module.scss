@@ -27,11 +27,11 @@
     color: $white;
     font-size: 7rem;
     font-weight: bold;
-    @include font-averia;
+    @include font-bebas;
   }
 
   .sub-title {
-    @include font-averia;
+    @include jost-font;
     color: $secondary-color;
     font-weight: bold;
     font-size: 1.875rem;

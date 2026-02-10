@@ -1,0 +1,198 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.contact-container {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+//   padding: 2rem 1rem;
+
+  .contact-title {
+    @include font-bebas;
+    font-size: 4.375rem;
+  }
+
+  .contact-sub-title {
+    @include jost-font;
+    font-size: 1.875rem;
+    color: $secondary-color;
+    font-weight: bold;
+  }
+
+  .contact-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+
+    .contact-item {
+      @include jost-font;
+      font-size: 1.25rem;
+      width: 18.75rem;
+      text-align: center;
+
+      p {
+        font-weight: bold;
+        margin-bottom: 0.625rem;
+      }
+
+      a {
+        display: inline-block;
+        color: black;
+        padding: 0.5rem 1rem;
+        border: solid 0.125rem $button-color;
+        border-radius: 1.875rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:visited {
+          color: black;
+        }
+
+        &:hover {
+          color: $white;
+          @include gradient-components;
+        //   border-color: transparent;
+        border:none;
+        }
+      }
+    }
+  }
+
+  .footer {
+    @include jost-font;
+    background: #e5e5e5;
+    @include gradient-components;
+    padding: 3rem 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+
+    margin-top: auto;
+    position: relative;
+
+    .contact-form {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      .col-1,
+      .col-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9375rem;
+        text-align: left;
+
+        input,
+        textarea {
+          margin-top: 0.3rem;
+          padding: 0.45rem 0.6rem;
+          border-radius: 0.375rem;
+          border: none;
+          background: #fff;
+          font-size: 0.8rem;
+          width: 13.75rem;
+
+          &:focus {
+            outline: solid 0.125rem $button-color;
+          }
+        }
+
+        textarea {
+          min-height: 4.375rem;
+          resize: none;
+        }
+      }
+
+      input[type='submit'] {
+        align-self: flex-end;
+        margin-top: 1.4rem;
+        padding: 0.45rem 1.2rem;
+        border-radius: 1.875rem;
+        border: none;
+        background-color: $button-color;
+        font-size: 0.9375rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .contact-container {
+    .contact-title {
+      font-size: 3.5rem;
+    }
+
+    .footer {
+      padding: 2.5rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    .contact-title {
+      font-size: 2.8rem;
+    }
+
+    .contact-sub-title {
+      font-size: 1.4rem;
+    }
+
+    .contact-list {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+
+      .contact-form {
+        justify-content: center;
+
+        input[type='submit'] {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1.5rem 1rem;
+
+    .footer {
+      padding: 1.5rem 1rem;
+
+      .contact-form {
+        flex-direction: column;
+
+        input,
+        textarea {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

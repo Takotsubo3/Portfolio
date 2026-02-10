@@ -3,7 +3,7 @@ import { FaArrowDown } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <section className="home-container">
       <MetaBalls
         color="#000000"
         cursorBallColor="#000000"
@@ -23,6 +23,6 @@ export default function Home() {
           <FaArrowDown />
         </button>
       </div>
-    </div>
+    </section>
   );
 }

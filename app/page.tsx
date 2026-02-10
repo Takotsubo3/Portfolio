@@ -3,6 +3,8 @@ import Nav from "../components/Nav/Nav";
 import HomePage from "./Home/Home";
 import Projects from "./Projects/Projects";
 import About from "./About/About";
+import Contact from "./Contact/Contact";
+
 
 
 export default function Home() {
@@ -13,6 +15,7 @@ export default function Home() {
         <HomePage/>
         <About/>
         <Projects/>
+        <Contact/>
       </main>
     </div>
   );
