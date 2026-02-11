@@ -30,25 +30,43 @@ export default function Contact() {
         </div>
       </div>
       <footer className="footer">
-        <form className="contact-form">
-          <div className="col-1">
-            <label>
-              Name
-              <input type="text" required />
-            </label>
-            <label>
-              Email
-              <input type="email" required />
-            </label>
+        <div className="footer-info">
+          <form className="contact-form">
+            <div className="col-1">
+              <label>
+                Name
+                <input type="text" required />
+              </label>
+              <label>
+                Email
+                <input type="email" required />
+              </label>
+            </div>
+            <div className="col-2">
+              <label>
+                Message
+                <textarea required />
+              </label>
+              <input type="submit" />
+            </div>
+          </form>
+          <div className="footer-text">
+            <h2 className="footer-title">Made with</h2>
+            <ul>
+              <li>
+                <Image src="/physics.png" width={32} height={32} /> React
+              </li>
+              <li>
+                <Image src="/typescript.png" width={32} height={32} />{' '}
+                Typescript
+              </li>
+              <li>
+                <Image src="/file.png" width={32} height={32} /> Scss
+              </li>
+            </ul>
           </div>
-          <div className="col-2">
-            <label>
-              Message
-              <textarea  required/>
-            </label>
-            <input type="submit" />
-          </div>
-        </form>
+        </div>
+       <p className='copyright'>&copy; 2026 Céléna L&apos;Entété</p> 
       </footer>
     </section>
   );

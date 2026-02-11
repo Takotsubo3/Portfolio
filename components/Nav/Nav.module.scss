@@ -3,40 +3,45 @@
 
 .nav-bar {
   @include jost-font;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1.25rem;
-  font-size: 1.25rem;
-  // position: sticky;
-  top:0;
-  height: 3.125rem;
-  @include gradient-bg(100%);
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
 
   .menu {
-    @include glass-effect;
+    // @include glass-effect;
     padding: 1.25rem;
-
     display: flex;
     flex-direction: row;
     gap: 2.5rem;
-
     align-items: center;
     border-radius: 1.875rem;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.862);
+    box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0);
+    transition: all 5s ease-in-out;
 
     a {
-      list-style: none;
+      color: white;
       text-decoration: none;
-      color: $white;
+      @include gradient-components;
+      background-size: 0% 0.2em;
+      background-position-y: 100%;
+      background-position-x: 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.2s ease-in-out;
+    }
 
-      &:visited {
-        text-decoration: none;
-      }
-
-      &:hover {
-        color: $secondary-color;
-      }
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 0.2em;
+      background-position-x: 0%;
     }
   }
 
@@ -46,6 +51,5 @@
     padding: 0.75rem;
     border: none;
     color: black;
-    // border-radius: 100px;
   }
 }

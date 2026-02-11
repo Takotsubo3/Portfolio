@@ -6,14 +6,16 @@
 
 .contact-container {
   min-height: 100svh;
+  margin: 0;
   display: flex;
   flex-direction: column;
   text-align: center;
-//   padding: 2rem 1rem;
+  //   padding: 2rem 1rem;
 
   .contact-title {
     @include font-bebas;
     font-size: 4.375rem;
+    margin-top: 3.125rem;
   }
 
   .contact-sub-title {
@@ -27,7 +29,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin: 3rem 0;
+    margin: 3.5rem 0;
     flex-wrap: wrap;
 
     .contact-item {
@@ -48,7 +50,7 @@
         border: solid 0.125rem $button-color;
         border-radius: 1.875rem;
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease-in-out;
 
         &:visited {
           color: black;
@@ -57,8 +59,8 @@
         &:hover {
           color: $white;
           @include gradient-components;
-        //   border-color: transparent;
-        border:none;
+          //   border-color: transparent;
+          border: none;
         }
       }
     }
@@ -66,17 +68,25 @@
 
   .footer {
     @include jost-font;
-    background: #e5e5e5;
     @include gradient-components;
-    padding: 3rem 4rem;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-
-    margin-top: auto;
+    padding: 4rem 4rem;
     position: relative;
+    // align-items: flex-start;
+    margin-top: auto;
+
+    .footer-info {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 3rem;
+    }
+
+    .copyright {
+      // align-self: flex-end;
+      position: absolute;
+      bottom: 0;
+      justify-self: center;
+      margin-bottom: 0.3125rem;
+    }
 
     .contact-form {
       display: flex;
@@ -93,7 +103,7 @@
       label {
         display: flex;
         flex-direction: column;
-        font-size: 0.9375rem;
+        font-size: 1.125rem;
         text-align: left;
 
         input,
@@ -130,9 +140,26 @@
         color: black;
       }
     }
+    .footer-text {
+      .footer-title {
+        margin-bottom: 0.625rem;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+      }
+    }
   }
 }
-
 
 @media (max-width: 1024px) {
   .contact-container {
@@ -141,7 +168,7 @@
     }
 
     .footer {
-      padding: 2.5rem 2rem;
+    //   padding: 2.5rem 2rem;
     }
   }
 }
@@ -161,11 +188,11 @@
       align-items: center;
     }
 
-    .footer {
+    .footer-info {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 2rem 1.5rem;
+    //   padding: 2rem 1.5rem;
 
       .contact-form {
         justify-content: center;
@@ -180,9 +207,9 @@
 
 @media (max-width: 480px) {
   .contact-container {
-    padding: 1.5rem 1rem;
+    // padding: 1.5rem 1rem;
 
-    .footer {
+    .footer-info {
       padding: 1.5rem 1rem;
 
       .contact-form {

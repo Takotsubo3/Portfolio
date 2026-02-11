@@ -25,7 +25,10 @@ export default function Nav() {
         className="lang-select"
         options={languages}
         formatOptionLabel={(option) => (
-          <div className='lang-option' style={{ display: 'flex', alignItems: 'center' }}>
+          <div
+            className="lang-option"
+            style={{ display: 'flex', alignItems: 'center' }}
+          >
             <Image
               src={option.image}
               alt={option.label}
@@ -38,18 +41,18 @@ export default function Nav() {
         )}
       />
       <ul className="menu">
-        <Link href="">
-          <li>Home</li>
-        </Link>
-        <Link href="">
-          <li>About Me</li>
-        </Link>
-        <Link href="">
-          <li>Projects</li>
-        </Link>
-        <Link href="">
-          <li>Contact</li>
-        </Link>
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="/about">About Me</Link>
+        </li>
+        <li>
+          <Link href="/projects">Projects</Link>
+        </li>
+        <li>
+          <Link href="/contact">Contact</Link>
+        </li>
       </ul>
     </nav>
   );

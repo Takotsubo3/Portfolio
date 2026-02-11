@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="main-title">Céléna L&apos;Entété</h1>
         <h2 className="sub-title">Full-Stack Development Student</h2>
         <button className='home-btn'>
-          <FaArrowDown />
+          <FaArrowDown width={30} height={30}/>
         </button>
       </div>
     </section>
