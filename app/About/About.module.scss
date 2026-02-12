@@ -1,124 +1,70 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
+
 .about-container {
   height: 100svh;
-  @include font-bebas;
 
   .about-title {
+    @include font-bebas;
     text-align: center;
     font-size: 4.375rem;
     padding: 50 0;
   }
 
-  .card {
-    position: relative;
-    width: 31.25rem;
-    height: 25rem;
-    background: linear-gradient(
-      -45deg,
-      rgb(243, 105, 31) 0%,
-      rgba(97, 232, 151, 1) 100%
-    );
-    border-radius: 0.625rem;
-    color: white;
-    font-size: 3.75rem;
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3.125rem;
+    width: 75%;
     justify-self: center;
-    align-self: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .vertical-line {
+  height: auto;              /* height of the line */
+  border-left: 4px solid;     /* required for border-image to work */
+  border-image: linear-gradient(to bottom, rgb(243, 105, 31 ), rgba(97, 232, 151, 1)) 1;
+}
 
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-
-    &:hover {
-      cursor: pointer;
-      transform: rotate(-5deg) scale(1.1);
-      box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
-
-      .card-content {
-        transform: translate(-50%, -50%) rotate(0deg);
-        opacity: 1;
-      }
-
-      svg {
-        scale: 0;
-        transform: rotate(-45deg);
-      }
-    }
-
-    .card-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-45deg);
-
-      width: 100%;
-      height: 100%;
-      padding: 1.875rem;
-      box-sizing: border-box;
-
-      background-color: #fff;
-      opacity: 0;
-
-      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-
-      .card-title {
-        margin: 0;
-        color: $secondary-color;
-        font-size: 2.5rem;
-        font-weight: 500;
-      }
-
-      .card-description {
-        margin: 0.625rem 0 0;
-        font-size: 1.5625rem;
-        color: black;
-        line-height: 1.4;
-      }
-    }
-  }
-  .stack-container {
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    margin: 1.875rem auto;
-  }
-
-  .track {
-    display: flex;
-    width: max-content;
-    animation: scroll 15s linear infinite;
-
-    .stack-list {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-
-      li {
-        flex: 0 0 auto;
-        margin-right: 1.25rem;
-        padding: .75rem 1rem;
-        // background: #eee;
-        background-color: #dab34e;
-        border-radius: .75rem;
-        box-shadow: rgba(0, 0, 0, 0.1) .3125rem .3125rem 1.25rem 0;
-        white-space: nowrap;
-        font-size: 1.25rem;
-        border: solid 2px #ca9100;
-      }
-    }
+.left-span{
+  .profile{
+    border-radius: 50%;
   }
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+
+    .right-span {
+
+      .card-title {
+        font-size: 1.875rem;
+        @include font-bebas;
+        color: $secondary-color;
+        margin-bottom: 0.625rem;
+      }
+
+      .card-description {
+        font-size: 1.25rem;
+        @include jost-font;
+      }
+    }
   }
-  100% {
-    transform: translateX(-50%);
+
+  .pop-up-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 3.125rem;
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    .pop-up-btn{
+      height: 6.25rem;
+      width: 6.25rem;
+      background-color: black;
+      border-radius: 50%;
+      color: white;
+      @include font-bebas;
+      font-size: 1.25rem;
+      cursor: pointer;
+      
+    }
   }
 }

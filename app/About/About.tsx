@@ -1,65 +1,41 @@
+"use client";
 import Image from 'next/image';
-import Button from '../../components/Button/Button';
-import { FaArrowDown } from 'react-icons/fa';
 
 export default function About() {
   return (
     <section className="about-container">
       <h1 className="about-title">About Me</h1>
-      <div className="card">
-        HI, I&apos;M CELENA
-        <div className="card-content">
-          <p className="card-title">HI, I&apos;M CELENA :')</p>
+      <div className="card-container">
+        <div className="left-span">
+          <Image className='profile' src="/me.jpeg" height={350} width={350} alt="celena lentete" />
+        </div>
+        <div className="vertical-line"></div>
+        <div className="right-span">
+          <h2 className="card-title">HI, I&apos;M CELENA</h2>
           <p className="card-description">
-            {''}
-            I’m a developer student driven by curiosity and creativity. I enjoy
-            exploring ideas, turning concepts into experiences, and learning by
-            building. Always eager to improve, I see every project as a new
-            challenge and every mistake as a step forward.
+            Lorem ipsum dolor sit amet. Est galisum fugiat non similique illum
+            33 voluptas autem ut nobis sint vel omnis quas rem voluptatem porro.
+            Est quia recusandae id modi soluta quo tempore corporis eos sunt
+            iste.
+            <br /><br />
+            Est perferendis unde qui ullam omnis et ratione dolores sit
+            nesciunt Quis non tenetur totam et quasi sint qui quisquam nemo! Ut
+            aspernatur doloremque sed mollitia velit aut dolorem nostrum? Eos
+            omnis optio et rerum corporis rem inventore placeat quo atque
+            placeat eos culpa saepe et architecto beatae in autem veritatis. 
+           <br /><br />
+            Qui
+            Quis porro est rerum molestias et consequatur vitae id animi
+            perferendis est dolores porro et voluptas deleniti et enim iusto. Ad
+            reprehenderit voluptas eum alias nihil non nulla sint.
           </p>
         </div>
       </div>
-      <div className="stack-container">
-        <div className="track">
-          <ul className="stack-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>PHP</li>
-            <li>SQL</li>
-            <li>Bash</li>
-            <li>NodeJS</li>
-            <li>React</li>
-            <li>Tailwind</li>
-            <li>Symfony</li>
-            <li>SpringBoot</li>
-            <li>Nunjucks</li>
-            <li>MySQL</li>
-            <li>JAVA</li>
-            <li>VB.NET</li>
-          </ul>
-          <ul aria-hidden className="stack-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>PHP</li>
-            <li>SQL</li>
-            <li>Bash</li>
-            <li>NodeJS</li>
-            <li>React</li>
-            <li>Tailwind</li>
-            <li>Symfony</li>
-            <li>SpringBoot</li>
-            <li>Nunjucks</li>
-            <li>MySQL</li>
-            <li>JAVA</li>
-            <li>VB.NET</li>
-          </ul>
-        </div>
+      <div className="pop-up-btns">
+        <button className='pop-up-btn'>CV</button>
+        <button className='pop-up-btn'>HardSkills</button>
+        <button className='pop-up-btn'>SoftSkills</button>
+
       </div>
     </section>
   );
