@@ -1,70 +1,142 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translatex(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%{
+      transform: translateY(0);
+  }
+
+  100%{
+      transform: scale(1.1);
+  }
+}
 
 .about-container {
-  height: 100svh;
+  min-height: 100svh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  
+  view-timeline-name: --section-reveal;
+  view-timeline-axis: block;
+  animation: fadeInUp linear both;
+  animation-timeline: --section-reveal;
+  animation-range: entry 20% cover 40%;
 
   .about-title {
     @include font-bebas;
     text-align: center;
-    font-size: 4.375rem;
-    padding: 50 0;
+    font-size: clamp(3rem, 8vw, 4.375rem); 
+    margin-bottom: 3rem;
   }
 
   .card-container {
     display: flex;
-    flex-direction: row;
-    gap: 3.125rem;
-    width: 75%;
-    justify-self: center;
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 4rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 3.125rem;
+    }
 
     .vertical-line {
-  height: auto;              /* height of the line */
-  border-left: 4px solid;     /* required for border-image to work */
-  border-image: linear-gradient(to bottom, rgb(243, 105, 31 ), rgba(97, 232, 151, 1)) 1;
-}
+      display: none; 
+      @media (min-width: 768px) {
+        display: block;
+        align-self: stretch;
+        border-left: 4px solid;
+        border-image: linear-gradient(to bottom, rgb(243, 105, 31), rgba(97, 232, 151, 1)) 1;
+      }
+    }
 
-.left-span{
-  .profile{
-    border-radius: 50%;
-  }
-}
-
+    .left-span {
+         display: flex;
+        align-self: center;
+      .profile {
+        border-radius: 50%;
+        object-fit: cover;
+        max-width: 250px;
+        height: 100%; 
+        // border: .125rem solid $secondary-color;
+      }
+    }
 
     .right-span {
+      text-align: center;
+      @media (min-width: 768px) {
+        text-align: left;
+      }
 
       .card-title {
-        font-size: 1.875rem;
+        font-size: 2.25rem;
         @include font-bebas;
         color: $secondary-color;
-        margin-bottom: 0.625rem;
+        margin-bottom: 1rem;
       }
 
       .card-description {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
         @include jost-font;
       }
     }
   }
 
-  .pop-up-btns{
+  .pop-up-btns {
     display: flex;
-    flex-direction: row;
-    gap: 3.125rem;
-    width: 100%;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
     justify-content: center;
-    height: auto;
-    .pop-up-btn{
+    width: 100%;
+    animation: float 3s ease-in-out infinite;
+
+
+    .pop-up-btn {
       height: 6.25rem;
       width: 6.25rem;
       background-color: black;
+      border: 2px solid transparent;
       border-radius: 50%;
       color: white;
       @include font-bebas;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       cursor: pointer;
-      
+      transition: all 0.4s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        @include gradient-components;
+        border-color: white;
+        transition: float 2s  alternate;
+      }
     }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

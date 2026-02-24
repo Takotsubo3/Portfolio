@@ -1,34 +1,156 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
+// Variables for dot customization
+$dot-size: 10px;
+$dot-color: #ccc;
+$dot-active-color: $secondary-color;
+$dot-spacing: 8px;
+$transition-time: 0.3s;
+
 .projects-container {
-  height:100svh;
+  height: 100svh;
+
+  h1 {
+    text-align: center;
+    font-size: clamp(3rem, 8vw, 4.375rem);
+    @include font-bebas;
+    margin-bottom: 0.5rem;
+  }
+
   .card-container {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 70px;
     margin-top: 2.5rem;
     flex-wrap: wrap;
+    text-align: center;
 
     .card {
       width: 250px;
       padding: 1.5rem;
+      border: solid 0.125rem $button-color;
       border-radius: 20px;
-      background-color: whitesmoke;
       text-align: center;
-      transition: 0.3s ease;
+
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
       h2 {
-        font-size: 1.2rem;
-        color: #222;
-        margin: 0;
+        @include font-bebas;
+        font-size: 25px;
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        @include jost-font;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 1rem;
       }
 
       &:hover {
-        background-color: #ffe87c;
-        transform: translateY(-5px);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
         cursor: pointer;
+      }
+
+      ul {
+        @include jost-font;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          background-color: black;
+          color: white;
+          padding: 4px 10px;
+          font-size: 14px;
+          border-radius: 50px;
+          white-space: nowrap;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  // Dots container (hidden by default, shown in mobile)
+  .dots-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    height: auto;
+    padding: 2rem 0;
+    position: relative; // For absolute positioning of dots
+
+    .card-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 40px; // Space for dots
+
+      // Padding to center first and last cards
+      padding-left: calc((100% - 80%) / 2);
+      padding-right: calc((100% - 80%) / 2);
+    }
+
+    .card-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      flex: 0 0 80%;
+      max-width: 300px;
+      scroll-snap-align: center;
+      // Remove auto margins as padding handles centering
+    }
+
+    .dots-container {
+      display: flex;
+      justify-content: center;
+      gap: $dot-spacing;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+
+      .dot {
+        width: $dot-size;
+        height: $dot-size;
+        border-radius: 50%;
+        background: $dot-color;
+        border: none;
+        cursor: pointer;
+        transition: background $transition-time ease, transform $transition-time ease;
+        padding: 0;
+
+        &:hover {
+          transform: scale(1.2);
+          background: darken($dot-color, 20%);
+        }
+
+        &.active {
+          background: $dot-active-color;
+          transform: scale(1.2);
+        }
       }
     }
   }

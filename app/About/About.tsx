@@ -35,7 +35,6 @@ export default function About() {
         <button className='pop-up-btn'>CV</button>
         <button className='pop-up-btn'>HardSkills</button>
         <button className='pop-up-btn'>SoftSkills</button>
-
       </div>
     </section>
   );
