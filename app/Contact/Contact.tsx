@@ -1,34 +1,44 @@
 "use client";
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Contact() {
+  const [isPending, setIsPending] = useState(false);
 
-  async function handleSubmit(e: any) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsPending(true);
 
-    const form = e.target;
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    const payload = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value,
-      }),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
-      alert("Message sent!");
-      form.reset();
-    } else {
-      alert("Something went wrong.");
+      if (data.success) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert("Error: " + (data.error?.message || "Something went wrong"));
+      }
+    } catch (err) {
+      alert("Network error. Please try again.");
+    } finally {
+      setIsPending(false);
     }
   }
 
@@ -65,49 +75,42 @@ export default function Contact() {
 
       <footer className="footer">
         <div className="footer-info">
-
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="col-1">
               <label>
                 Name
-                <input name="name" type="text" required />
+                <input name="name" type="text" required disabled={isPending} />
               </label>
 
               <label>
                 Email
-                <input name="email" type="email" required />
+                <input name="email" type="email" required disabled={isPending} />
               </label>
             </div>
 
             <div className="col-2">
               <label>
                 Message
-                <textarea name="message" required />
+                <textarea name="message" required disabled={isPending} />
               </label>
 
-              <input type="submit" />
+              <button type="submit" disabled={isPending} style={{ opacity: isPending ? 0.5 : 1 }}>
+                {isPending ? "Sending..." : "Submit"}
+              </button>
             </div>
           </form>
 
           <div className="footer-text">
             <h2 className="footer-title">Made with</h2>
             <ul>
-              <li>
-                <Image src="/physics.png" width={32} height={32} alt='react logo'/> React
-              </li>
-              <li>
-                <Image src="/typescript.png" width={32} height={32} alt='typescript logo'/>{' '}
-                Typescript
-              </li>
-              <li>
-                <Image src="/file.png" width={32} height={32} alt='scss logo'/> Scss
-              </li>
+              <li><Image src="/physics.png" width={32} height={32} alt='react logo'/> React</li>
+              <li><Image src="/typescript.png" width={32} height={32} alt='ts logo'/> Typescript</li>
+              <li><Image src="/file.png" width={32} height={32} alt='scss logo'/> Scss</li>
             </ul>
           </div>
-
         </div>
 
-       <p className='copyright'>&copy; 2026 Céléna L&apos;Entété</p> 
+        <p className='copyright'>&copy; 2026 Céléna L&apos;Entété</p> 
       </footer>
     </section>
   );
