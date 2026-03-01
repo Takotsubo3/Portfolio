@@ -1,4 +1,4 @@
-'allowImp'
+'allowImp';
 import Image from 'next/image';
 import Nav from '../components/Nav/Nav';
 import HomePage from './Home/Home';
@@ -9,6 +9,7 @@ import Contact from './Contact/Contact';
 export default function Home() {
   return (
     <div>
+      <link rel="icon" type="image/png" href="/favicon.png" />
       <main>
         <Nav />
         <HomePage />
