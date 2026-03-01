@@ -13,7 +13,7 @@
     "about": {
       "title": "About Me",
       "greeting": "HI, I'M CELENA",
-      "description": "Lorem ipsum dolor sit amet. Est galisum fugiat non similique illum 33 voluptas autem ut nobis sint vel omnis quas rem voluptatem porro. Est quia recusandae id modi soluta quo tempore corporis eos sunt iste.\n\nEst perferendis unde qui ullam omnis et ratione dolores sit nesciunt Quis non tenetur totam et quasi sint qui quisquam nemo! Ut aspernatur doloremque sed mollitia velit aut dolorem nostrum?",
+      "description": "I’m a second-year Bachelor student with a passion for digital creation and web development. I enjoy turning ideas into interactive experiences, building projects from scratch, and finding smart solutions to challenging problems.\n\nI’m currently seeking a 2–4 month internship where I can put my skills into practice, learn within a professional environment, and continue to grow as a developer. Collaboration, creativity, and curiosity drive me whether it’s designing sleek interfaces, managing data, or experimenting with new technologies.\n\nWhen I’m not coding, you’ll probably find me exploring the latest tech trends, tinkering with small projects, or seeking inspiration from the world around me. I’m excited to bring my energy and enthusiasm to a team that values innovation and hands-on learning.",
       "buttons": {
         "cv": "CV",
         "skills": "Skills"
@@ -30,7 +30,7 @@
     },
     "contact": {
       "title": "Contact Info",
-      "subtitle": "Drop me a message and let’s build something cool together.",
+      "subtitle": "Feel free to send me a message to discuss professional opportunities.",
       "items": {
         "email": "Email",
         "linkedin": "LinkedIn",
@@ -65,7 +65,7 @@
     "about": {
       "title": "À propos de moi",
       "greeting": "SALUT, JE SUIS CELENA",
-      "description": "Lorem ipsum dolor sit amet. Est galisum fugiat non similique illum 33 voluptas autem ut nobis sint vel omnis quas rem voluptatem porro. Est quia recusandae id modi soluta quo tempore corporis eos sunt iste.\n\nEst perferendis unde qui ullam omnis et ratione dolores sit nesciunt Quis non tenetur totam et quasi sint qui quisquam nemo! Ut aspernatur doloremque sed mollitia velit aut dolorem nostrum?",
+      "description": "Je suis ETUDIANTE en deuxième année de Bachelor, passionnée par la création numérique et le développement web. J’adore transformer des idées en expériences interactives, construire des projets et trouver des solutions astucieuses à des problèmes complexes.\n\nJe recherche actuellement un stage de 2 à 4 mois pour mettre mes compétences en pratique, apprendre dans un environnement professionnel et évoluer en tant que développeuse. La collaboration, la créativité et la curiosité me motivent, que ce soit pour concevoir des interfaces élégantes, organiser des bases de données ou expérimenter de nouvelles technologies.\n\nQuand je ne code pas, vous me trouverez probablement en train de découvrir les nouvelles tendances tech, de bricoler de petits projets ou de chercher l’inspiration partout autour de moi. J’ai hâte d’apporter mon énergie et mon enthousiasme à une équipe qui valorise l’innovation et l’apprentissage pratique.",
       "buttons": {
         "cv": "CV",
         "skills": "Compétences"
@@ -87,7 +87,7 @@
     },
     "contact": {
       "title": "Contact",
-      "subtitle": "Laissez-moi un message et construisons quelque chose de cool ensemble.",
+      "subtitle": "N’hésitez pas à me laisser un message pour discuter de collaborations professionnelles.",
       "items": {
         "email": "E-mail",
         "linkedin": "LinkedIn",

@@ -32,7 +32,7 @@
       "id": 5,
       "slug": "portfolio",
       "technologies": ["React", "SCSS", "TypeScript"],
-      "image": "/emotions.png",
+      "image": "/portfolio.png",
       "github": "https://github.com/Takotsubo3/Portfolio.git"
     }
   ]

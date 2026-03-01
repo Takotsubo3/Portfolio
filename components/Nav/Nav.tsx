@@ -8,7 +8,7 @@ import { useTranslation } from '@/app/context/LanguageContext';
 
 const languages = [
   { value: 'en', label: 'English', image: '/united-kingdom.png' },
-  { value: 'fr', label: 'French', image: '/france.png' },
+  { value: 'fr', label: ' Français', image: '/france.png' },
 ];
 
 export default function Nav() {

@@ -8,8 +8,8 @@
     },
     "skillswipe": {
       "name": "SkillSwipe",
-      "description": "Une plateforme d'emploi style Tinder pour étudiants et recruteurs.",
-      "fullDescription": "SkillSwipe révolutionne la recherche d'emploi pour les étudiants en utilisant une interface de type swipe. Étudiants et recruteurs matchent selon leurs compétences."
+      "description": "Une plateforme d'emploi style Tinder pour professionnels et recruteurs.",
+      "fullDescription": "SkillSwipe révolutionne la recherche d'emploi en utilisant une interface de type swipe. Professionnels et recruteurs matchent selon leurs compétences et expériences."
     },
     "botanica": {
       "name": "Botanica",
@@ -23,7 +23,7 @@
     },
     "portfolio": {
       "name": "Portfolio",
-      "description": "Mon portfolio de développeur présentant mes projets et mes compétences.",
+      "description": "Mon portfolio présentant mes projets et mes compétences.",
       "fullDescription": "Ce site présente mon travail, y compris des projets de développement web, des expériences créatives et mes compétences techniques. Il sert de point central pour explorer les projets que j'ai réalisés et les technologies que j'utilise."
     }
   },
