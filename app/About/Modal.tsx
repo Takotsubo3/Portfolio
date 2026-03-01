@@ -9,7 +9,10 @@ export default function Modal({ onClose }: ModalProps) {
   const { t } = useTranslation();
   const hardSkills = ["React", "Next.js", "TypeScript", "SCSS", "Node.js", "Git", "Figma"];
 
-  const softSkills = t('about.softSkills.list', { returnObjects: true }) as string[];
+const softSkills = (t as unknown as (key: string, options: { returnObjects: boolean }) => string[])(
+  'about.softSkills.list', 
+  { returnObjects: true }
+);
 
   return (
     <div className="modal-overlay" onClick={onClose}>
