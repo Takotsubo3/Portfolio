@@ -1,0 +1,31 @@
+{
+  "title": "Projects",
+  "items": {
+    "home-alone-escape": {
+      "name": "Home Alone Escape Game",
+      "description": "An online escape game with interactive rooms and mini-games.",
+      "fullDescription": "A complete immersive experience developed with Node.js. Includes multiple puzzle rooms, a complex hint system, and a global leaderboard to track escape times."
+    },
+    "skillswipe": {
+      "name": "SkillSwipe",
+      "description": "A Tinder-style job platform for students and recruiters.",
+      "fullDescription": "SkillSwipe revolutionizes the job search for students by using a swipe-based interface. Recruiters and students can match based on skills and interests in real-time."
+    },
+    "botanica": {
+      "name": "Botanica",
+      "description": "A complete front-end project focused on SCSS and UI implementation.",
+      "fullDescription": "Botanica is a fully front-end project built with HTML, SCSS, and JavaScript. It focuses on structured SCSS architecture (variables, mixins, responsive design) and the implementation of a modern, responsive interface from a design mockup."
+    },
+    "interactive-emotions-experiment": {
+      "name": "Interactive Emotions Experiment",
+      "description": "An interactive web experiment exploring emotions through creative design and animations.",
+      "fullDescription": "This project is an interactive web experience designed to explore different emotions through creative visuals and animations. Three emotions are represented, each using unique colors and artistic styles. Frustration is illustrated with a button that escapes the mouse in a fiery red and yellow environment. Calm creates a peaceful atmosphere with interactive bubbles and relaxing music. Joy is represented through bright light rays and uplifting visuals."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": "My personal developer portfolio showcasing my projects and skills.",
+      "fullDescription": "This website presents my work, including web development projects, creative experiments, and technical skills. It serves as a central place to explore the projects I have built and the technologies I use."
+    }
+  },
+  "view_github": "View on GitHub"
+}

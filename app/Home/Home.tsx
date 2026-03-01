@@ -1,10 +1,12 @@
 'use client';
 import { useEffect } from 'react';
 import MetaBalls from '../../components/Metaballs/Metaballs';
+import { useTranslation } from '@/app/context/LanguageContext';
 import { FaArrowDown } from 'react-icons/fa';
 
 export default function Home() {
-  // Set CSS variable for actual viewport height (iPhone fix)
+    const { t, setLang, lang } = useTranslation();
+  
   useEffect(() => {
     const setAppHeight = () => {
       document.documentElement.style.setProperty(
@@ -32,8 +34,8 @@ export default function Home() {
         speed={0.2}
       />
       <div className="home-page">
-        <h1 className="main-title">Céléna L&apos;Entété</h1>
-        <h2 className="sub-title">Full-Stack Development Student</h2>
+        <h1 className="main-title">{t('home.name')}</h1>
+        <h2 className="sub-title">{t('home.role')}</h2>
         <button className="home-btn">
           <FaArrowDown />
         </button>

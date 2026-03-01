@@ -11,7 +11,7 @@ html, body {
   height: var(--app-height, 100svh); // Use real device height on iPhone
   min-height: var(--app-height, 100svh);
   position: relative;
-  width: 100%;
+  width: 100dvw;
   overflow: hidden;
   @include gradient-bg(100%);
 

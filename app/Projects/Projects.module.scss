@@ -1,7 +1,6 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
-// Variables for dot customization
 $dot-size: 10px;
 $dot-color: #ccc;
 $dot-active-color: $secondary-color;
@@ -9,7 +8,8 @@ $dot-spacing: 8px;
 $transition-time: 0.3s;
 
 .projects-container {
-  height: 100svh;
+  min-height: 100svh;
+  padding: 4rem 1rem;
 
   h1 {
     text-align: center;
@@ -27,14 +27,12 @@ $transition-time: 0.3s;
     text-align: center;
 
     .card {
-      width: 250px;
+      width: 280px;
       padding: 1.5rem;
       border: solid 0.125rem $button-color;
       border-radius: 20px;
       text-align: center;
-
       transition: transform 0.25s ease, box-shadow 0.25s ease;
-
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 
       h2 {
@@ -46,7 +44,7 @@ $transition-time: 0.3s;
 
       p {
         @include jost-font;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.4;
         margin-bottom: 1rem;
       }
@@ -57,7 +55,7 @@ $transition-time: 0.3s;
         cursor: pointer;
       }
 
-      ul {
+      .technologies {
         @include jost-font;
         display: flex;
         justify-content: center;
@@ -71,22 +69,62 @@ $transition-time: 0.3s;
           background-color: black;
           color: white;
           padding: 4px 10px;
-          font-size: 14px;
+          font-size: 12px;
           border-radius: 50px;
           white-space: nowrap;
-          transition: transform 0.2s ease;
-
-          &:hover {
-            transform: scale(1.05);
-          }
         }
       }
     }
   }
 
-  // Dots container (hidden by default, shown in mobile)
   .dots-container {
     display: none;
+  }
+}
+
+.project-modal {
+  max-width: 700px;
+  width: 95%;
+
+  .project-image-container {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .project-full-description {
+    @include jost-font;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .github-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: white;
+    color: black;
+    border-radius: 50px;
+    @include font-bebas;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $secondary-color;
+      color: white;
+      transform: translateY(-3px);
+    }
   }
 }
 
@@ -94,7 +132,7 @@ $transition-time: 0.3s;
   .projects-container {
     height: auto;
     padding: 2rem 0;
-    position: relative; // For absolute positioning of dots
+    position: relative;
 
     .card-container {
       display: flex;
@@ -102,24 +140,18 @@ $transition-time: 0.3s;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       gap: 20px;
-      -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      padding-bottom: 40px; // Space for dots
+      padding-bottom: 60px;
+      padding-left: 10%;
+      padding-right: 10%;
 
-      // Padding to center first and last cards
-      padding-left: calc((100% - 80%) / 2);
-      padding-right: calc((100% - 80%) / 2);
-    }
+      &::-webkit-scrollbar { display: none; }
 
-    .card-container::-webkit-scrollbar {
-      display: none;
-    }
-
-    .card {
-      flex: 0 0 80%;
-      max-width: 300px;
-      scroll-snap-align: center;
-      // Remove auto margins as padding handles centering
+      .card {
+        flex: 0 0 80%;
+        max-width: 300px;
+        scroll-snap-align: center;
+      }
     }
 
     .dots-container {
@@ -130,7 +162,6 @@ $transition-time: 0.3s;
       bottom: 20px;
       left: 0;
       right: 0;
-      z-index: 10;
 
       .dot {
         width: $dot-size;
@@ -138,15 +169,7 @@ $transition-time: 0.3s;
         border-radius: 50%;
         background: $dot-color;
         border: none;
-        cursor: pointer;
-        transition: background $transition-time ease, transform $transition-time ease;
         padding: 0;
-
-        &:hover {
-          transform: scale(1.2);
-          background: darken($dot-color, 20%);
-        }
-
         &.active {
           background: $dot-active-color;
           transform: scale(1.2);

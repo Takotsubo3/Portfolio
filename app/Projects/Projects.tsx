@@ -1,37 +1,34 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import projectsData from '../../Data/projects.json';
+import { useTranslation } from '@/app/context/LanguageContext';
+import ProjectModal from './ProjectModal';
 
-type Project = {
+interface Project {
   id: number;
-  name: string;
-  description: string;
+  slug: string;
   technologies: string[];
-};
+  image: string;
+  github: string;
+}
 
-const ProjectCard: React.FC = () => {
+const Projects: React.FC = () => {
   const projects: Project[] = projectsData.projects;
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Force initial scroll to 0 to ensure first card is visible
-    container.scrollTo({ left: 0, behavior: 'auto' });
-
     const handleScroll = () => {
       const cardElements = container.querySelectorAll('.card');
       if (cardElements.length === 0) return;
-
-      const cardWidth = cardElements[0].offsetWidth;
-      const gap = parseFloat(getComputedStyle(container).gap) || 20;
-      const paddingLeft = parseFloat(getComputedStyle(container).paddingLeft) || 0;
-      const itemWidth = cardWidth + gap;
-
-      // Adjust scrollLeft by paddingLeft
-      const newIndex = Math.round((container.scrollLeft + paddingLeft) / itemWidth);
+      const cardWidth = (cardElements[0] as HTMLElement).offsetWidth;
+      const gap = 20; 
+      const newIndex = Math.round(container.scrollLeft / (cardWidth + gap));
       setActiveIndex(Math.max(0, Math.min(newIndex, cardElements.length - 1)));
     };
 
@@ -39,32 +36,14 @@ const ProjectCard: React.FC = () => {
     return () => container.removeEventListener('scroll', handleScroll);
   }, [projects.length]);
 
-  const scrollToCard = (index: number) => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const cardElements = container.querySelectorAll('.card');
-    if (cardElements.length === 0) return;
-
-    const cardWidth = cardElements[0].offsetWidth;
-    const gap = parseFloat(getComputedStyle(container).gap) || 20;
-    const paddingLeft = parseFloat(getComputedStyle(container).paddingLeft) || 0;
-    const itemWidth = cardWidth + gap;
-
-    container.scrollTo({
-      left: index * itemWidth - paddingLeft,
-      behavior: 'smooth',
-    });
-  };
-
   return (
-    <section className="projects-container">
-      <h1>My Projects</h1>
+    <section id="projects" className="projects-container">
+      <h1>{t('projects.title')}</h1>
       <div className="card-container" ref={containerRef}>
         {projects.map((project) => (
-          <div className="card" key={project.id}>
-            <h2>{project.name}</h2>
-            <p>{project.description}</p>
+          <div className="card" key={project.id} onClick={() => setSelectedProject(project)}>
+            <h2>{t(`projects.items.${project.slug}.name`)}</h2>
+            <p>{t(`projects.items.${project.slug}.description`)}</p>
             <ul className="technologies">
               {project.technologies.map((tech, index) => (
                 <li key={index}>{tech}</li>
@@ -73,17 +52,15 @@ const ProjectCard: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="dots-container">
-        {projects.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${activeIndex === index ? 'active' : ''}`}
-            onClick={() => scrollToCard(index)}
-          />
-        ))}
-      </div>
+
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={() => setSelectedProject(null)} 
+        />
+      )}
     </section>
   );
 };
 
-export default ProjectCard;
+export default Projects;

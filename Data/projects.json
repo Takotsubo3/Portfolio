@@ -1,42 +1,39 @@
 {
   "projects": [
     {
-      "id" : 1,
-      "name": "Home Alone Escape Game",
-      "description": "An online escape game with interactive rooms and mini-games.",
-      "technologies": [ "JavaScript", "Node.js", "Nunjucks"]
+      "id": 1,
+      "slug": "home-alone-escape",
+      "technologies": ["JavaScript", "Node.js", "Nunjucks"],
+      "image": "/home-alone.png",
+      "github": "https://github.com/Takotsubo3/home-alone_v2.git"
     },
     {
-      "id" : 2,
-      "name": "SkillSwipe",
-      "description": "A Tinder-style job platform for students and recruiters.",
-      "technologies": ["PHP", "MySQL", "JavaScript"]
-    },
-
-    {
-      "id" : 3,
-      "name": "SkillSwipe",
-      "description": "A Tinder-style job platform for students and recruiters.",
-      "technologies": ["PHP", "MySQL", "JavaScript"]
-    },
-
-    {
-      "id" : 4,
-      "name": "SkillSwipe",
-      "description": "A Tinder-style job platform for students and recruiters.",
-      "technologies": ["PHP", "MySQL", "JavaScript"]
+      "id": 2,
+      "slug": "skillswipe",
+      "technologies": ["PHP", "MySQL", "JavaScript"],
+      "image": "/skillswipe.png",
+      "github": "https://github.com/username/skillswipe"
     },
     {
-      "id" : 5,
-      "name": "SkillSwipe",
-      "description": "A Tinder-style job platform for students and recruiters.",
-      "technologies": ["PHP", "MySQL", "JavaScript"]
+      "id": 3,
+      "slug": "botanica",
+      "technologies": ["HTML", "SCSS", "JavaScript"],
+      "image": "/botanica.png",
+      "github": "https://github.com/Takotsubo3/Botanica.git"
     },
     {
-      "id" : 6,
-      "name": "SkillSwipe",
-      "description": "A Tinder-style job platform for students and recruiters.",
-      "technologies": ["PHP", "MySQL", "JavaScript"]
+      "id": 4,
+      "slug": "interactive-emotions-experiment",
+      "technologies": ["HTML", "SCSS", "JavaScript"],
+      "image": "/emotions.png",
+      "github": "https://github.com/LucasAudoubert/Creative-development-101.git"
+    },
+    {
+      "id": 5,
+      "slug": "portfolio",
+      "technologies": ["React", "SCSS", "TypeScript"],
+      "image": "/emotions.png",
+      "github": "https://github.com/Takotsubo3/Portfolio.git"
     }
   ]
 }

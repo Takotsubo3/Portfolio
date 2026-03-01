@@ -7,11 +7,12 @@ import Contact from "./Contact/Contact";
 
 
 
+
 export default function Home() {
   return (
     <div >
       <main>
-        {/* <Nav/> */}
+        <Nav/>
         <HomePage/>
         <About/>
         <Projects/>

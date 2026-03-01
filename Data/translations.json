@@ -1,0 +1,111 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About Me",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "home": {
+      "name": "Céléna L'Entété",
+      "role": "Full-Stack Development Student"
+    },
+    "about": {
+      "title": "About Me",
+      "greeting": "HI, I'M CELENA",
+      "description": "Lorem ipsum dolor sit amet. Est galisum fugiat non similique illum 33 voluptas autem ut nobis sint vel omnis quas rem voluptatem porro. Est quia recusandae id modi soluta quo tempore corporis eos sunt iste.\n\nEst perferendis unde qui ullam omnis et ratione dolores sit nesciunt Quis non tenetur totam et quasi sint qui quisquam nemo! Ut aspernatur doloremque sed mollitia velit aut dolorem nostrum?",
+      "buttons": {
+        "cv": "CV",
+        "skills": "Skills"
+      },
+      "softSkills": {
+        "title": "Soft Skills",
+        "list": ["Teamwork", "Problem Solving", "Communication"]
+      }
+    },
+    "projects": {
+      "title": "My Projects",
+      "viewCode": "View Code",
+      "liveDemo": "Live Demo"
+    },
+    "contact": {
+      "title": "Contact Info",
+      "subtitle": "Drop me a message and let’s build something cool together.",
+      "items": {
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Submit",
+        "sending": "Sending...",
+        "success": "Message sent successfully!",
+        "error": "Something went wrong."
+      },
+      "footer": {
+        "madeWith": "Made with",
+        "copyright": "© 2026 Céléna L'Entété"
+      }
+    }
+  },
+  "fr": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "home": {
+      "name": "Céléna L'Entété",
+      "role": "Étudiante en développement Full-Stack"
+    },
+    "about": {
+      "title": "À propos de moi",
+      "greeting": "SALUT, JE SUIS CELENA",
+      "description": "Lorem ipsum dolor sit amet. Est galisum fugiat non similique illum 33 voluptas autem ut nobis sint vel omnis quas rem voluptatem porro. Est quia recusandae id modi soluta quo tempore corporis eos sunt iste.\n\nEst perferendis unde qui ullam omnis et ratione dolores sit nesciunt Quis non tenetur totam et quasi sint qui quisquam nemo! Ut aspernatur doloremque sed mollitia velit aut dolorem nostrum?",
+      "buttons": {
+        "cv": "CV",
+        "skills": "Compétences"
+      },
+      "softSkills": {
+        "title": "Soft Skills",
+        "list": [
+          "Adaptabilité",
+          "Esprit d'équipe",
+          "Résolution de problèmes",
+          "Créativité"
+        ]
+      }
+    },
+    "projects": {
+      "title": "Mes Projets",
+      "viewCode": "Voir le code",
+      "liveDemo": "Démo"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Laissez-moi un message et construisons quelque chose de cool ensemble.",
+      "items": {
+        "email": "E-mail",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "form": {
+        "name": "Nom",
+        "email": "E-mail",
+        "message": "Message",
+        "submit": "Envoyer",
+        "sending": "Envoi en cours...",
+        "success": "Message envoyé avec succès !",
+        "error": "Une erreur est survenue."
+      },
+      "footer": {
+        "madeWith": "Réalisé avec",
+        "copyright": "© 2026 Céléna L'Entété"
+      }
+    }
+  }
+}

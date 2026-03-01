@@ -7,14 +7,24 @@
 @use '../components//Button/Button.module.scss';
 @use './Contact/Contact.module.scss';
 
-
 * {
   margin: 0;
   padding: 0;
 }
 
+
+html,
 body {
-  /* background: var(--background);2 */
-  // color: var(--foreground);
-  // background-color: $primary-color;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

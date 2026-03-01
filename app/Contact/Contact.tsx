@@ -3,8 +3,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from '@/app/context/LanguageContext';
+
 
 export default function Contact() {
+  const { t, setLang, lang } = useTranslation();
+
   const [isPending, setIsPending] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -43,10 +47,10 @@ export default function Contact() {
   }
 
   return (
-    <section className="contact-container">
-      <h1 className="contact-title">Contact Info</h1>
+    <section id="contact" className="contact-container">
+      <h1 className="contact-title">{t('contact.title')}</h1>
       <h3 className="contact-sub-title">
-        Drop me a message and let’s build something cool together.
+        {t('contact.subtitle')}
       </h3>
 
       <div className="contact-list">
@@ -78,30 +82,30 @@ export default function Contact() {
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="col-1">
               <label>
-                Name
+                {t('contact.form.name')}
                 <input name="name" type="text" required disabled={isPending} />
               </label>
 
               <label>
-                Email
+                {t('contact.form.email')}
                 <input name="email" type="email" required disabled={isPending} />
               </label>
             </div>
 
             <div className="col-2">
               <label>
-                Message
+                {t('contact.form.message')}
                 <textarea name="message" required disabled={isPending} />
               </label>
 
               <button type="submit" disabled={isPending} style={{ opacity: isPending ? 0.5 : 1 }}>
-                {isPending ? "Sending..." : "Submit"}
+                {isPending ? t('contact.form.sending') : t('contact.form.submit')}
               </button>
             </div>
           </form>
 
           <div className="footer-text">
-            <h2 className="footer-title">Made with</h2>
+            <h2 className="footer-title">{t('contact.footer.madeWith')}</h2>
             <ul>
               <li><Image src="/physics.png" width={32} height={32} alt='react logo'/> React</li>
               <li><Image src="/typescript.png" width={32} height={32} alt='ts logo'/> Typescript</li>
@@ -110,7 +114,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <p className='copyright'>&copy; 2026 Céléna L&apos;Entété</p> 
+        <p className='copyright'>{t('contact.footer.copyright')}</p> 
       </footer>
     </section>
   );

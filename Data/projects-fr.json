@@ -1,0 +1,31 @@
+{
+  "title": "Projets",
+  "items": {
+    "home-alone-escape": {
+      "name": "Home Alone Escape Game",
+      "description": "Un jeu d'évasion en ligne avec des salles interactives et des mini-jeux.",
+      "fullDescription": "Une expérience immersive complète développée avec Node.js. Comprend plusieurs salles d'énigmes, un système d'indices complexe et un classement mondial."
+    },
+    "skillswipe": {
+      "name": "SkillSwipe",
+      "description": "Une plateforme d'emploi style Tinder pour étudiants et recruteurs.",
+      "fullDescription": "SkillSwipe révolutionne la recherche d'emploi pour les étudiants en utilisant une interface de type swipe. Étudiants et recruteurs matchent selon leurs compétences."
+    },
+    "botanica": {
+      "name": "Botanica",
+      "description": "Un projet front-end complet pour tester SCSS et l'intégration d'une interface moderne.",
+      "fullDescription": "Botanica est un projet front-end entièrement réalisé avec HTML, SCSS et JavaScript. Il met l'accent sur l'organisation du code SCSS (variables, mixins, responsive design) et sur l'intégration d'une interface moderne et responsive à partir d'une maquette."
+    },
+    "interactive-emotions-experiment": {
+      "name": "Expérience Interactive des Émotions",
+      "description": "Une expérience web interactive qui explore les émotions à travers un design créatif et des animations.",
+      "fullDescription": "Ce projet est une expérience web interactive conçue pour explorer différentes émotions à travers des visuels créatifs et des animations. Trois émotions sont représentées, chacune utilisant des couleurs uniques et des styles artistiques différents. La frustration est illustrée par un bouton qui fuit la souris dans une ambiance rouge et jaune rappelant le feu. Le calme crée une atmosphère apaisante avec des bulles interactives et une musique relaxante. La joie est représentée par des rayons lumineux et des visuels dynamiques."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": "Mon portfolio de développeur présentant mes projets et mes compétences.",
+      "fullDescription": "Ce site présente mon travail, y compris des projets de développement web, des expériences créatives et mes compétences techniques. Il sert de point central pour explorer les projets que j'ai réalisés et les technologies que j'utilise."
+    }
+  },
+  "view_github": "Voir sur GitHub"
+}

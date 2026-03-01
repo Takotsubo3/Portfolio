@@ -4,7 +4,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translatex(100px);
+    transform: translateX(100px); 
   }
   to {
     opacity: 1;
@@ -13,13 +13,8 @@
 }
 
 @keyframes float {
-  0%{
-      transform: translateY(0);
-  }
-
-  100%{
-      transform: scale(1.1);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .about-container {
@@ -39,7 +34,7 @@
     @include font-bebas;
     text-align: center;
     font-size: clamp(3rem, 8vw, 4.375rem); 
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; 
   }
 
   .card-container {
@@ -49,52 +44,43 @@
     gap: 2rem;
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto 4rem;
+    margin: 0 auto; 
 
     @media (min-width: 768px) {
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center; 
       gap: 3.125rem;
     }
 
-    .vertical-line {
-      display: none; 
-      @media (min-width: 768px) {
-        display: block;
-        align-self: stretch;
-        border-left: 4px solid;
-        border-image: linear-gradient(to bottom, rgb(243, 105, 31), rgba(97, 232, 151, 1)) 1;
-      }
-    }
-
     .left-span {
-         display: flex;
-        align-self: center;
+      display: flex;
+      justify-content: center;
       .profile {
-        border-radius: 50%;
-        object-fit: cover;
-        max-width: 250px;
-        height: 100%; 
-        // border: .125rem solid $secondary-color;
+        border-radius: 50%; 
+        object-fit: cover; 
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        width: 250px;
+        height: 250px;
+
+        @media (max-width: 768px) {
+          width: 200px;
+          height: 200px;
+        }
       }
     }
 
     .right-span {
       text-align: center;
-      @media (min-width: 768px) {
-        text-align: left;
-      }
-
+      @media (min-width: 768px) { text-align: left; }
       .card-title {
         font-size: 2.25rem;
         @include font-bebas;
         color: $secondary-color;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem; 
       }
-
       .card-description {
         font-size: 1.1rem;
-        line-height: 1.6;
+        line-height: 1.5;
         @include jost-font;
       }
     }
@@ -103,11 +89,11 @@
   .pop-up-btns {
     display: flex;
     flex-wrap: wrap; 
-    gap: 1.5rem;
+    gap: 2rem; 
     justify-content: center;
     width: 100%;
-    animation: float 3s ease-in-out infinite;
-
+    margin-top: 3rem;
+    animation: float 4s ease-in-out infinite;
 
     .pop-up-btn {
       height: 6.25rem;
@@ -125,18 +111,112 @@
         transform: scale(1.1);
         @include gradient-components;
         border-color: white;
-        transition: float 2s  alternate;
+      }
+
+      @media (max-width: 480px) {
+        height: 5.5rem;
+        width: 5.5rem;
+        font-size: 1rem;
       }
     }
   }
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  padding: 1rem; 
+}
+
+.modal-content {
+  background: #050505;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 1);
+  
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $secondary-color transparent;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
   }
-  50% {
-    transform: translateY(-10px);
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10;
+    &:hover { color: $secondary-color; }
+  }
+
+  .modal-section {
+    margin-bottom: 1.5rem;
+    &:last-child { margin-bottom: 0; }
+  }
+
+  .modal-title {
+    @include font-bebas;
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+
+    .skill-item {
+      @include jost-font;
+      padding: 0.4rem 0.9rem;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50px;
+      color: #eee;
+      font-size: 0.9rem;
+      
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+      }
+    }
+  }
+
+  .modal-divider {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    margin: 1.5rem 0;
   }
 }
