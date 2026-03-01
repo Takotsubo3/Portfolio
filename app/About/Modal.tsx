@@ -7,7 +7,11 @@ interface ModalProps {
 
 export default function Modal({ onClose }: ModalProps) {
   const { t } = useTranslation();
-  const hardSkills = ["React", "Next.js", "TypeScript", "SCSS", "Node.js", "Git", "Figma"];
+  const hardSkills = [
+  "C#", "CSS", "HTML5", "Java", "JavaScript", "PHP", "Python", "TypeScript",
+  "Vercel", ".NET", "Node.js", "Nuxt.js", "React", "Spring", "Vue.js", "Symfony",
+   "Nginx", "MariaDB", "Canva", "Figma", "GitHub", "GitLab", "Git"
+];;
 
 const softSkills = (t as unknown as (key: string, options: { returnObjects: boolean }) => string[])(
   'about.softSkills.list', 
