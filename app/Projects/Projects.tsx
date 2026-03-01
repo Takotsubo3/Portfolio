@@ -1,7 +1,8 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import projectsData from '../../Data/projects.json';
-import { useTranslation } from '@/app/context/LanguageContext';
+// import { useTranslation } from '@/app/context/LanguageContext';
+import {useTranslation} from '../../app/context/LanguageContext'
 import ProjectModal from './ProjectModal';
 
 interface Project {
