@@ -12,6 +12,11 @@
   }
 }
 
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -23,7 +28,6 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 1rem;
-  
   view-timeline-name: --section-reveal;
   view-timeline-axis: block;
   animation: fadeInUp linear both;
@@ -61,7 +65,6 @@
         border: 2px solid rgba(255, 255, 255, 0.1);
         width: 250px;
         height: 250px;
-
         @media (max-width: 768px) {
           width: 200px;
           height: 200px;
@@ -124,38 +127,43 @@
 
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
   background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
-  padding: 1rem; 
+  z-index: 99999;
+
+  @media (max-width: 768px) {
+    align-items: flex-end; 
+    padding: 0; 
+  }
 }
 
 .modal-content {
+  box-sizing: border-box; 
   background: #050505;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2.5rem;
   border-radius: 2rem;
-  width: 100%;
+  width: 90%; 
   max-width: 550px;
   position: relative;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 1);
-  
-  max-height: 85vh;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  max-height: 85dvh;
   overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: $secondary-color transparent;
 
   @media (max-width: 768px) {
-    padding: 2rem 1.5rem;
+    width: 100%; 
+    border-radius: 2rem 2rem 0 0; 
+    padding: 3rem 1.5rem 2rem;
+    margin: 0; 
+    animation: slideUp 0.3s ease-out forwards;
   }
 
   .close-btn {
@@ -183,10 +191,7 @@
     color: white;
     margin-bottom: 1.2rem;
     letter-spacing: 1px;
-    
-    @media (max-width: 480px) {
-      font-size: 1.5rem;
-    }
+    @media (max-width: 480px) { font-size: 1.5rem; }
   }
 
   .skills-list {
@@ -205,7 +210,6 @@
       border-radius: 50px;
       color: #eee;
       font-size: 0.9rem;
-      
       @media (max-width: 480px) {
         font-size: 0.8rem;
         padding: 0.3rem 0.7rem;

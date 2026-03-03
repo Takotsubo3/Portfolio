@@ -107,5 +107,62 @@
         "copyright": "© 2026 Céléna L'Entété"
       }
     }
+  },
+  "km": {
+    "nav": {
+      "home": "Akey",
+      "about": "Lor mwa",
+      "projects": "Proze",
+      "contact": "Kontak"
+    },
+    "home": {
+      "name": "Céléna L'Entété",
+      "role": "Etidyan Devlopman Full-Stack"
+    },
+    "about": {
+      "title": "Lor mwa",
+      "greeting": "BONZOUR, MO APPEL CELENA",
+      "description": "Mo enn etidyan an deziem lane Bachelor ek mo ena enn gran pasion pou kreasion digital ek devlopman web. Mo kontan transform bann lide an lexperyans interaktif, konstrir proze depi zero, ek trouv bann solision entelizan pou bann problem difisil.\n\nAktielman mo pe rod enn stage 2 a 4 mwa kot mo kapav met mo konpetans an pratik, aprann dan enn lanvironnman profesionniel, ek kontinie grandi kuma enn developper. Kolaborasion, kreativite ek kiryozite motiv mwa, ki li pou fer bann interface modern, ouswa test nouvo teknolozi.\n\nKan mo pa pe kod, mo pe explor bann nouvo tandans tech, fer tipti proze, ouswa rod linspirasion dan lemond otour mwa. Mo bien anvi amenn mo lenerzi ek mo lantouziasm dan enn lekip ki valorize inovasion ek laprantisaz pratik.",
+      "buttons": {
+        "cv": "CV",
+        "skills": "Konpetans"
+      },
+      "softSkills": {
+        "title": "Soft Skills",
+        "list": [
+          "Travay an lekip",
+          "Rezoud problem",
+          "Komunikasion",
+          "Adaptabilite"
+        ]
+      }
+    },
+    "projects": {
+      "title": "Mo Bann Proze",
+      "viewCode": "Get Kod",
+      "liveDemo": "Get Demo"
+    },
+    "contact": {
+      "title": "Kontak",
+      "subtitle": "Pa ezite pou avoye mwa enn mesaz pou koz lor oportinite profesionel.",
+      "items": {
+        "email": "Email",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "form": {
+        "name": "Nom",
+        "email": "Email",
+        "message": "Mesaz",
+        "submit": "Avoye",
+        "sending": "Pe avoye...",
+        "success": "Mesaz finn avoye avek sikse!",
+        "error": "Ena enn problem."
+      },
+      "footer": {
+        "madeWith": "Fer avek",
+        "copyright": "© 2026 Céléna L'Entété"
+      }
+    }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "title": "Proze",
+  "items": {
+    "home-alone-escape": {
+      "name": "Home Alone Escape Game",
+      "description": "Enn game levazyon an-lign avek bann lasal interaktif ek mini-je.",
+      "fullDescription": "Enn lexperyans imersiv konplet devlope avek Node.js. Li inklir plizir lasal puzzle, enn sistem lindis konplex ek enn klasman mondyal."
+    },
+    "skillswipe": {
+      "name": "SkillSwipe",
+      "description": "Enn platform lanplwa stil Tinder pou profesionniel ek rekriter.",
+      "fullDescription": "SkillSwipe revolisionn resers lanplwa par servi enn sistem swipe. Profesionniel ek rekriter fer match dapre zot konpetans ek lexperyans."
+    },
+    "botanica": {
+      "name": "Botanica",
+      "description": "Enn proze front-end konplet pou test SCSS ek lintegrasion enn interface modern.",
+      "fullDescription": "Botanica enn proze front-end devlope an antye avek HTML, SCSS ek JavaScript. Li met lanfaz lor bon organizasion kod SCSS (variables, mixins, responsive design) ek lintegrasion enn interface modern ek responsive depi enn maket."
+    },
+    "interactive-emotions-experiment": {
+      "name": "Lexperyans Interaktif lor Lemotion",
+      "description": "Enn lexperyans web interaktif ki explor bann lemosion atraver enn design kreatif ek animasion.",
+      "fullDescription": "Sa proze la enn lexperyans web interaktif ki explor diferan lemosion atraver bann viziel kreatif ek animasion. Trwa lemosion reprezanté, sakenn avek zot prop kouler ek stil artistik. Fristrasion montre par enn bouton ki sove kan souri apros dan enn lanbians rouz ek zonn kouma dife. Kalme kree enn latmosfer apézant avek bul interaktif ek lamizik relaksan. Lazwa reprezanté par reyon limier ek viziel dinamik."
+    },
+    "portfolio": {
+      "name": "Portfolio",
+      "description": "Mo portfolio ki prezant mo bann proze ek mo konpetans.",
+      "fullDescription": "Sa site la prezant mo travay, inklir bann proze devlopman web, lexperyans kreatif ek mo konpetans teknik. Li servi kouma pwin santral pou explor bann proze ki mo finn realize ek bann teknolozi ki mo servi."
+    }
+  },
+  "view_github": "Get lor GitHub"
+}

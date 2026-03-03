@@ -9,6 +9,7 @@ import { useTranslation } from '@/app/context/LanguageContext';
 const languages = [
   { value: 'en', label: 'English', image: '/united-kingdom.png' },
   { value: 'fr', label: ' Français', image: '/france.png' },
+  {value: 'km', label: 'Kreol Morisien', image: '/moris.png'},
 ];
 
 export default function Nav() {

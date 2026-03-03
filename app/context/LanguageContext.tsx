@@ -4,8 +4,9 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 import translations from '@/Data/translations.json';
 import projectsEn from '@/Data/projects-en.json';
 import projectsFr from '@/Data/projects-fr.json';
+import projectsKm from '@/Data/projects-km.json';
 
-type Language = 'en' | 'fr';
+type Language = 'en' | 'fr' | 'km';
 
 interface LanguageContextType {
   lang: Language;
@@ -23,7 +24,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     
     const allTranslations: any = {
       en: { ...translations.en, projects: projectsEn },
-      fr: { ...translations.fr, projects: projectsFr }
+      fr: { ...translations.fr, projects: projectsFr },
+      km: { ...translations.km, projects: projectsKm }
     };
 
     let result: any = allTranslations[lang];
