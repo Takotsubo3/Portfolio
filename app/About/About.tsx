@@ -9,7 +9,7 @@ export default function About() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDownloadCV = () => {
-    window.open('/cv-celena-lentete.pdf (2).pdf', '_blank');
+    window.open('/cv-celena-lentete.pdf', '_blank');
   };
 
   return (
